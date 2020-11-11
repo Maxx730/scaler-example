@@ -7,7 +7,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.react-scale-settings {
+  text-align: center;
+}
+
+.options {
+  list-style: none;
+}
+
+.option{
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+}
+
+.option label {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-items: center;
+  vertical-align: center;
 }
