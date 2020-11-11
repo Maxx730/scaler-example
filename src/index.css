@@ -28,3 +28,7 @@ body {
   align-items: center;
   vertical-align: center;
 }
+
+.react-scale-preview {
+  text-align: center;
+}

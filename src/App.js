@@ -11,14 +11,15 @@ export default class App extends React.Component {
     this.state = {
       src: null,
       grid: true,
-      maxScale: 3
+      maxScale: 3,
+      cropOutput: null
     }
   }
 
   render() {
     return(
       <div className='react-scale-example'>
-        {!this.state.src && 
+        {(!this.state.src && !this.state.cropOutput) && 
         <div className='react-scale-settings'>
           <h1>
             React Scale Example
@@ -47,11 +48,35 @@ export default class App extends React.Component {
           </ul>
         </div>
         }
-        {this.state.src && <ReactImageScaler drawGrid={this.state.grid} src={this.state.src} backgroundColor={'#000000'} maxScale={this.state.maxScale} scaleStep={0.01} onScaleApply={(data) => {
-          data.then((result) => {
-            console.log(result);
-          });
-        }}/>}
+        {
+          this.state.src && <ReactImageScaler drawGrid={this.state.grid} src={this.state.src} backgroundColor={'#000000'} maxScale={this.state.maxScale} width={1024} height={800} scaleStep={0.001} onScaleApply={(data) => {
+            data.then((result) => {
+              this.setState({
+                cropOutput: result,
+                src: null
+              });
+            });
+          }} onCancel={() => {
+            this.setState({
+              src: null
+            });
+          }}/>
+        }
+        {
+          this.state.cropOutput && 
+          <div className='react-scale-preview'>
+            <h2>Scale Preview</h2>
+            <p>
+              <img src={this.state.cropOutput}/>
+            </p>
+            <button onClick={() => {
+              this.setState({
+                src: null,
+                cropOutput: null
+              });
+            }}>Reset</button>
+          </div>
+        }
       </div>
     );
   }
