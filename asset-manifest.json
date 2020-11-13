@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/scaler-example/static/css/main.2735b186.chunk.css",
-    "main.js": "/scaler-example/static/js/main.1959ac3b.chunk.js",
-    "main.js.map": "/scaler-example/static/js/main.1959ac3b.chunk.js.map",
+    "main.js": "/scaler-example/static/js/main.2a0757ee.chunk.js",
+    "main.js.map": "/scaler-example/static/js/main.2a0757ee.chunk.js.map",
     "runtime-main.js": "/scaler-example/static/js/runtime-main.68a3357b.js",
     "runtime-main.js.map": "/scaler-example/static/js/runtime-main.68a3357b.js.map",
     "static/js/2.6c1d80c2.chunk.js": "/scaler-example/static/js/2.6c1d80c2.chunk.js",
     "static/js/2.6c1d80c2.chunk.js.map": "/scaler-example/static/js/2.6c1d80c2.chunk.js.map",
     "index.html": "/scaler-example/index.html",
-    "precache-manifest.6a64562d9d413001140119c08bfc096f.js": "/scaler-example/precache-manifest.6a64562d9d413001140119c08bfc096f.js",
+    "precache-manifest.a60a323dacdc61b7607b08d0296f754f.js": "/scaler-example/precache-manifest.a60a323dacdc61b7607b08d0296f754f.js",
     "service-worker.js": "/scaler-example/service-worker.js",
     "static/css/main.2735b186.chunk.css.map": "/scaler-example/static/css/main.2735b186.chunk.css.map",
     "static/js/2.6c1d80c2.chunk.js.LICENSE.txt": "/scaler-example/static/js/2.6c1d80c2.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.68a3357b.js",
     "static/js/2.6c1d80c2.chunk.js",
     "static/css/main.2735b186.chunk.css",
-    "static/js/main.1959ac3b.chunk.js"
+    "static/js/main.2a0757ee.chunk.js"
   ]
 }
