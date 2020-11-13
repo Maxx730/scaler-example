@@ -49,7 +49,7 @@ export default class App extends React.Component {
         </div>
         }
         {
-          this.state.src && <ReactImageScaler drawGrid={this.state.grid} src={this.state.src} backgroundColor={'#000000'} maxScale={this.state.maxScale} width={1024} height={800} scaleStep={0.001} onScaleApply={(data) => {
+          this.state.src && <div className='image-scaler'><ReactImageScaler maxScale={5} backgroundColor={'#000000'} drawGrid={false} width={1024} height={768} src={this.state.src} onScaleApply={(data) => {
             data.then((result) => {
               this.setState({
                 cropOutput: result,
@@ -60,7 +60,7 @@ export default class App extends React.Component {
             this.setState({
               src: null
             });
-          }}/>
+          }}/></div>
         }
         {
           this.state.cropOutput && 

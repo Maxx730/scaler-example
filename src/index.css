@@ -32,3 +32,8 @@ body {
 .react-scale-preview {
   text-align: center;
 }
+
+.image-scaler {
+ display: flex;
+ justify-content: center;
+}
