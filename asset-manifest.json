@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/scaler-example/static/css/main.2735b186.chunk.css",
-    "main.js": "/scaler-example/static/js/main.90e07d65.chunk.js",
-    "main.js.map": "/scaler-example/static/js/main.90e07d65.chunk.js.map",
+    "main.css": "/scaler-example/static/css/main.7888faa1.chunk.css",
+    "main.js": "/scaler-example/static/js/main.2c85ebf4.chunk.js",
+    "main.js.map": "/scaler-example/static/js/main.2c85ebf4.chunk.js.map",
     "runtime-main.js": "/scaler-example/static/js/runtime-main.68a3357b.js",
     "runtime-main.js.map": "/scaler-example/static/js/runtime-main.68a3357b.js.map",
     "static/js/2.6c1d80c2.chunk.js": "/scaler-example/static/js/2.6c1d80c2.chunk.js",
     "static/js/2.6c1d80c2.chunk.js.map": "/scaler-example/static/js/2.6c1d80c2.chunk.js.map",
     "index.html": "/scaler-example/index.html",
-    "precache-manifest.b5a0c34dc41a6e78b4095d89d1c90305.js": "/scaler-example/precache-manifest.b5a0c34dc41a6e78b4095d89d1c90305.js",
+    "precache-manifest.f37e7be2be2be216ee1302d7dc6835ee.js": "/scaler-example/precache-manifest.f37e7be2be2be216ee1302d7dc6835ee.js",
     "service-worker.js": "/scaler-example/service-worker.js",
-    "static/css/main.2735b186.chunk.css.map": "/scaler-example/static/css/main.2735b186.chunk.css.map",
+    "static/css/main.7888faa1.chunk.css.map": "/scaler-example/static/css/main.7888faa1.chunk.css.map",
     "static/js/2.6c1d80c2.chunk.js.LICENSE.txt": "/scaler-example/static/js/2.6c1d80c2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.68a3357b.js",
     "static/js/2.6c1d80c2.chunk.js",
-    "static/css/main.2735b186.chunk.css",
-    "static/js/main.90e07d65.chunk.js"
+    "static/css/main.7888faa1.chunk.css",
+    "static/js/main.2c85ebf4.chunk.js"
   ]
 }
