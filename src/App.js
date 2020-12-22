@@ -12,7 +12,15 @@ export default class App extends React.Component {
       src: null,
       grid: true,
       maxScale: 3,
-      cropOutput: null
+      showResolution: false,
+      cropOutput: null,
+      width: 1024,
+      height: 786,
+      scaleStep: 0.1,
+      backgroundColor: '#000000',
+      showScaleButtons: true,
+      cancelMessage: 'Cancel',
+      applyMessage: 'Apply'
     }
   }
 
@@ -28,28 +36,91 @@ export default class App extends React.Component {
             Please choose a file to load into the scaler, choose scaler settings before file.
           </p>
           <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" onChange={this.getFile}></input>
-          <ul className='options'>
-          <li className='option'>
-              <input type='checkbox' checked={this.state.grid} onChange={() => {
-                this.setState({
-                  grid: !this.state.grid
-                });
-              }}/>
-              <label>Draw Grid</label>
-            </li>
-            <li className='option'>
-              <input type='checkbox' checked={this.state.grid} onChange={(event) => {
-                this.setState({
-                  maxScale: event.target.value
-                });
-              }}/>
-              <label>Draw Grid</label>
-            </li>
-          </ul>
+          <h2>Prop Settings</h2>
+          <div className='options'>
+            <ul>
+              <li className='option'>
+                  <input type='checkbox' checked={this.state.grid} onChange={() => {
+                    this.setState({
+                      grid: !this.state.grid
+                    });
+                  }}/>
+                  <label>Draw Grid</label>
+                </li>
+              <li className='option'>
+                  <input type='checkbox' checked={this.state.showResolution} onChange={() => {
+                    this.setState({
+                      showResolution: !this.state.showResolution
+                    });
+                  }}/>
+                  <label>Show Resolution</label></li>
+              <li className='option'>
+                  <input type='checkbox' checked={this.state.showScaleButtons} onChange={() => {
+                    this.setState({
+                      showScaleButtons: !this.state.showScaleButtons
+                    });
+                  }}/>
+                  <label>Show Scale Buttons</label></li>
+            </ul>
+            <ul>
+              <li className='option'>
+                <span>Width: </span><input type='number' value={this.state.width} onChange={(event) => {
+                  this.setState({
+                    width: event.target.value
+                  });
+                }}/>
+              </li>
+              <li className='option'>
+                <span>Height: </span><input type='number' value={this.state.height} onChange={(event) => {
+                    this.setState({
+                      height: event.target.value
+                    });
+                  }}/>
+              </li>
+              <li className='option'>
+                <span>Background: </span><input type='text' value={this.state.backgroundColor} onChange={(event) => {
+                    this.setState({
+                      backgroundColor: event.target.value
+                    });
+                  }}/>
+              </li>
+              <li className='option'>
+                <span>Max Scale: </span><input type='number' value={this.state.maxScale} onChange={(event) => {
+                      this.setState({
+                        maxScale: event.target.value
+                      });
+                    }}/>
+              </li>
+              <li className='option'>
+                <span>Scale Step: </span><input type='number' value={this.state.scaleStep} onChange={(event) => {
+                        this.setState({
+                          scaleStep: event.target.value
+                        });
+                      }}/>
+              </li>
+              <li className='option'>
+                <span>Apply Label: </span><input type='text' value={this.state.applyMessage} onChange={(event) => {
+                        this.setState({
+                          applyMessage: event.target.value
+                        });
+                      }}/>
+              </li>
+              <li className='option'>
+                <span>Cancel Label: </span><input type='text' value={this.state.cancelMessage} onChange={(event) => {
+                        this.setState({
+                          cancelMessage: event.target.value
+                        });
+                      }}/>
+              </li>
+              <li className='option'>
+
+              </li>
+            </ul>
+          </div>
         </div>
         }
         {
-          this.state.src && <div className='image-scaler'><ReactImageScaler maxScale={5} backgroundColor={'#000000'} drawGrid={false} width={1024} height={768} src={this.state.src} onScaleApply={(data) => {
+          this.state.src && <div className='image-scaler'><ReactImageScaler renderDebug={true} cancelLabel={this.state.cancelMessage} applyLabel={this.state.applyMessage} scaleSizes={this.state.showScaleButtons} scaleStep={this.state.scaleStep} maxScale={this.state.maxScale} displayResolution={this.state.showResolution} backgroundColor={this.state.backgroundColor} drawGrid={this.state.grid} width={this.state.width} height={this.state.height} src={this.state.src} onScaleApply={(data) => {
             data.then((result) => {
               this.setState({
                 cropOutput: result,
@@ -67,7 +138,7 @@ export default class App extends React.Component {
           <div className='react-scale-preview'>
             <h2>Scale Preview</h2>
             <p>
-              <img src={this.state.cropOutput}/>
+              <img src={this.state.cropOutput} width={800}/>
             </p>
             <button onClick={() => {
               this.setState({

@@ -13,6 +13,18 @@ body {
 
 .options {
   list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.options ul li span  {
+  width: 100px;
+  text-align: left;
+}
+
+.options ul li label {
+  width: 160px;
+  text-align: right;
 }
 
 .option{
